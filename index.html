@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Room</title>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>   
+  </head>
+  <body>
+    <a-scene id="scene">
+
+      <!--Assets-->
+      <a-assets>        
+        <a-asset-item
+          id="rounded_chair"
+          src="./models/assets/rounded_chair/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="tabel"
+          src="./models/assets/tabel/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+        id="ceilingLamp"
+        src="./models/assets/ceilingLamp/scene.gltf"
+      ></a-asset-item>
+        
+      </a-assets>
+      
+      <!--Camera and Cursor-->
+      <a-entity
+        id="camera"
+        camera
+        position="0 1.6 0"
+        wasd-controls
+        look-controls="pointerLockEnabled: false"        
+      >
+        <a-entity
+            id="rounded_chair"
+            gltf-model="#rounded_chair"
+            position="2 -4.4 3"
+            scale="0.35 1 1"          
+          >
+          <a-entity
+            id="rounded_chair"
+            gltf-model="#rounded_chair"
+            position="8 -4.4 3"
+            scale="0.35 1 1"          
+          >
+        </a-entity>
+
+        <a-entity
+          id="tabel"
+          gltf-model="#tabel"
+          position="5 -4.4 3"
+          scale="0.35 1 1"          
+        >
+      </a-entity>
+      <a-entity
+          id="ceilingLamp"
+          gltf-model="#ceilingLamp"
+          position="5 2.4 3"
+          scale="0.35 1 1"          
+        >
+      </a-entity>
+        <a-cursor></a-cursor>        
+      </a-entity>
+      <!--Paintings-->
+  <a-plane
+          id = "wall-painter-right"
+          src="photos/photo.png"
+          position="5 -6 -3.3"
+          rotation="0 0 0"
+          width="4"
+          height="6"
+          >
+  </a-plane>
+  <a-plane
+   id = "wall-painter-right"
+      src="photos/photo1.png"
+      position="8 -6 -3.3"
+      rotation="0 0 0"
+      width="4"
+      height="6"
+      >
+  </a-plane>
+  <a-plane
+  id = "wall-painter-right"
+  src="photos/photo2.png"
+  position="11 -6 -3.3"
+  rotation="0 0 0"
+  width="4"
+  height="6"
+  >
+  </a-plane>
+
+       <!--Walls-->
+       <a-boxid="wall1" position="5 -8 -3.3" color="brown" depth="1" height="50" width="80"></a-box>
+    </a-scene>
+  </body>
+</html>
